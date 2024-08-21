@@ -2,8 +2,9 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ListarProduto from "../components/ListarProdutos";
-import "../globals.css"
+import "../globals.css";
 export default function Home(){
     const [listaProdutos, setProdutos] = useState([
         { id: 1, nome: 'Future Nostalgia', artista: 'Dua Lipa', preco: 'R$ 150,00', imagem: 'https://m.media-amazon.com/images/I/71VQFsqlPJL._AC_SX679_.jpg' },
@@ -39,12 +40,26 @@ const removerPedido = (id) => {
 return (
     <>
     <Header title={"As melhores ofertas musicais de hoje!"}/>
+    <Carousel
+            infiniteLoop
+            useKeyboardArrows
+            autoPlay
+            showArrows={true}
+            showStatus={false}
+            showThumbs={false}
+            dynamicHeight
+        >
+                <div>
+                    <img src="https://i.ytimg.com/vi/tRIficm2yeI/maxresdefault.jpg" alt="Slide 1" />
+                </div>
+
+            </Carousel>
     <div>
         <h1>Álbuns Musicais</h1>
         <ListarProduto listaProdutos={listaProdutos} adicionarItemPedidos={adicionarItemPedidos}/>
         {
             listaPedidos.map((produto)=>
-            <div key={produto.id}>
+            <div className="produto" key={produto.id}>
                 <img className="imagem" src={produto.imagem} width={250} height={250}/>
                 <p>{produto.nome}</p>
                 <p>{produto.artista}</p>
@@ -56,23 +71,5 @@ return (
     <Footer/>
     </>
 );
-    return(
-        <><>
-            <Header />
-            <p>SYMPHONY</p>
-        </><Carousel
-            infiniteLoop
-            useKeyboardArrows
-            autoPlay
-            showArrows={true}
-            showStatus={false}
-            showThumbs={false}
-            dynamicHeight
-        >
-                <div>
-                    <img src="" alt="Slide 1" />
-                </div>
 
-            </Carousel></>
-    );
 }

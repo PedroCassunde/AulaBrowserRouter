@@ -1,8 +1,8 @@
-import "../globals.css"
+import "../globals.css";
 export default function ListarProduto({listaProdutos, adicionarItemPedidos}){
     return(
         <div>
-        <h1>ListarProduto</h1>
+        <h1 className="slogan">Os Melhores Álbuns da História em um só Lugar!</h1>
         {
             listaProdutos.map((produto)=>
             <div key={produto.id}>

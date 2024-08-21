@@ -1,7 +1,5 @@
-
-imagem{
-    width: 50px;
-    height: 50px;
+p{
+    color: white;
 }
 body{
     background-color: rgb(96, 91, 91);
@@ -17,7 +15,18 @@ body{
 .desenvolvedor{
     color: white;
 }
-descrição{
+.descrição{
     align-items: center;
     text-decoration: white;
+}
+.produto{
+    color: white;
+}
+.album{
+    width: 150px;
+}
+.slogan{
+    text-size-adjust: 250px;
+    background-color: black;
+    color: white;
 }
