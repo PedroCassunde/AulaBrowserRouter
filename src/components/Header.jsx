@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-
+import "../globals.css"
 export default function Header(){
     return(
         <>
+        <div className="header">
         <nav>
             <ul>
                 <Link to="/">
@@ -16,6 +17,7 @@ export default function Header(){
                 </Link>
             </ul>
         </nav>
+        </div>
         </>
     );
 }
