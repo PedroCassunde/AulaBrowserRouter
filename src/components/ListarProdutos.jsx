@@ -7,8 +7,9 @@ export default function ListarProduto({listaProdutos, adicionarItemPedidos}){
             listaProdutos.map((produto)=>
             <div key={produto.id}>
                 <img className="imagem" src={produto.imagem} width={250} height={250}/>
-                <p>{produto.nome}</p>
+                <h2>{produto.nome}</h2>
                 <p>{produto.artista}</p>
+                <p>{produto.generos}</p>
                 <p>{produto.preco}</p>
                 <button onClick={()=> adicionarItemPedidos(produto)}>Por no Carrinho</button>
             </div>

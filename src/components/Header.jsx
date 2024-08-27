@@ -5,7 +5,7 @@ export default function Header(){
         <>
         <div className="header">
         <nav>
-            <ul>
+            <ul className="classe">
                 <Link to="/">
                     <li>Home</li>
                 </Link>
